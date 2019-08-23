@@ -1,0 +1,14 @@
+<!--<p>box works!</p>-->
+
+<div class="box">
+     <!--[ ]=property binding-->
+    <h1 class="boxTitle" (click)="show=!show">{{ title }}</h1>
+     <!--[ ]=property binding-->
+    <div class="boxContent" [hidden]="show">
+        <!-- transclusion -->
+        <ng-content></ng-content>
+    <!--OU <div class="boxContent" [style.display]="show ? 'none' : 'block'">-->    
+        Content of box : Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque voluptates distinctio temporibus adipisci inventore! Facilis minima consequatur deleniti placeat, dignissimos id, veritatis cum a rem aperiam earum architecto eos dolores nam voluptatem optio, dolorem alias ab officia nostrum laboriosam soluta. Necessitatibus sapiente dolorem, quam dolore quo odit omnis unde dicta sed neque deserunt voluptate doloribus, dignissimos ratione in quae nulla architecto praesentium est quibusdam? Voluptatibus reprehenderit ad est voluptas quibusdam qui repudiandae incidunt ipsum placeat impedit iste laboriosam officiis natus, id non officia! Dolore dolores rem obcaecati, delectus laboriosam minus sit iusto sequi dignissimos suscipit enim animi alias incidunt officiis!
+    </div>
+</div>
+

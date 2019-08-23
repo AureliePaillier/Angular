@@ -1,0 +1,17 @@
+<div>
+    <h2> Two Data Binding </h2>
+
+    <div>
+        <!-- envoi données et écoute -->
+        <label> Avec ngModel </label>
+        <input type="text" [(ngModel)] = "name">
+    </div>
+
+    <div>
+        <!-- envoi données mais n'écoute pas -->
+        <label> Sans ngModel </label>
+        <input type="text" (input) = "updateName($event)">
+    </div>
+
+    {{ name }}
+</div>

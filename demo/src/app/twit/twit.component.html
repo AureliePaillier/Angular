@@ -1,0 +1,24 @@
+<!--<p>twit works!</p>-->
+<div class="twit">
+    <div>
+        <input type="title" [(ngModel)]="title" placeholder="Saisissez votre titre" maxlength="15">
+    </div>
+    <div>
+        <textarea [ngClass]="{'error': content.length === text.maxLength }" maxLength="10" cols="30" rows="5" maxlength="10" placeholder="Contenu ..." [(ngModel)]="content" #text ></textarea>
+    </div>
+
+    <button class = "btn btn-dark"  (click)="onSend()" [disabled]="!(title && content)"> Ajouter </button>  {{ content.length }}/{{ text.maxLength }}
+
+    <app-box [title]="'Lorem Title'">
+        <p>Hello World</p>
+    </app-box>
+
+    <!--
+        [style.borderColor]="content.length === text.maxLength ? 'red' : '#ccc'"
+        
+        [ngStyle]="{'border-color': content.length === text.maxLength ? 'red' : '#ccc'}"
+
+        [ngClass]="{'error': content.length === text.maxLength }"    
+    -->
+
+</div>

@@ -1,0 +1,19 @@
+<!-- <p>hello works!</p> -->
+<div>
+    <input type="text" [(ngModel)]="text" placeholder="Saisissez votre texte">
+
+    <p [style.color]="text === 'toto' ? 'red' : 'green'">{{ text}}</p>
+
+
+    <button class = "btn btn-dark" (click)="toast($event)" [disabled]="!text.length">Click me</button>
+
+    <!--{{ value.name }}-->
+    <!--pipe: value entre ds tunnel et ressort en js-->
+    <!--{{ value | json }}-->
+    <!--{{ value.name | uppercase | lowercase }}-->
+    {{ sayHello('toto') }}
+
+
+
+
+</div>

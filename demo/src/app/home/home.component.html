@@ -1,0 +1,26 @@
+<!--<input type="text" appInputText>-->
+<!--<input type="text" appInputText>-->
+<input type="text" appInputText [(ngModel)]="inputText">
+
+<p appToggleText [color]="'red'" [txt]="inputText"> Hello World</p>
+
+<app-demo-binding></app-demo-binding>
+
+  <app-twit (twit)="saveTwit($event)"></app-twit>
+  <!-- on lui demande d'aller chercher app-box-->
+  <!-- ngFor est une directive-->
+  <app-box *ngFor="let message of twits" [title]="'message.title'">
+  <!-- filtres avec des pipes -->
+    <p> [innerHTML]="message.content | html2br | keepHtml"</p>
+    <!--
+      non fonctionnel
+      <p> {{ message.content | html2br | keepHtml }}</p>
+    -->
+    
+  </app-box>
+ 
+<!--  
+  <app-box>
+    <div>Bonjour le monde</div>
+  </app-box>
+-->
